@@ -248,13 +248,13 @@ class ScadaWindow(QMainWindow):
         self.state = "IDLE"
 
     def init_layout_objects(self):
-        # 1. Górne
+        # 1. Górne zbiorniki
         self.tankA = Zbiornik("Substrat A", QColor(255, 60, 60), label_pos='top', parent=self.canvas)
         self.tankA.move(60, 5) 
         self.tankB = Zbiornik("Substrat B", QColor(60, 100, 255), label_pos='top', parent=self.canvas)
         self.tankB.move(620, 5)
 
-        # 2. Mieszalnik (Środek)
+        # 2. Mieszalnik
         self.tankMix = Zbiornik("Mieszalnik", QColor(200, 50, 200), capacity=200, label_pos='right', parent=self.canvas)
         self.tankMix.move(340, 200) 
         
@@ -262,7 +262,7 @@ class ScadaWindow(QMainWindow):
         self.mixer = Mieszadlo(parent=self.canvas)
         self.mixer.move(360, 195) 
 
-        # 4. Produkt (Dół)
+        # 4. Produkt
         self.tankProd = Zbiornik("Produkt", QColor(40, 200, 40), capacity=200, label_pos='right', parent=self.canvas)
         self.tankProd.move(340, 400) 
 
